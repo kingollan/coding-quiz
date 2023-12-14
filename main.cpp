@@ -93,10 +93,8 @@ void Question::askQuestion()
 void startGame(){
     Question q1;
     Question q2;
-<<<<<<< HEAD
     Question q3;
-=======
->>>>>>> 503cddc (first commit)
+
     
     // Set the values of the object
     /*
@@ -117,7 +115,6 @@ void startGame(){
                  "3. Decimal\n",
                  "4. Programmeringsspråk\n",
                  2, 1);
-<<<<<<< HEAD
     
     q2.setValues(
                  "Vad gör ++ operatören?\n",
@@ -152,23 +149,6 @@ std::string quoteOfTheDay(){
         "8008135\n",
         "Another day, another dollar..\n"};
     return quotes[rand() % 6 + 1];
-=======
-    q2.setValues("\n", 
-                 "1. \n",
-                 "2. \n",
-                 "3. \n",
-                 "4. \n",
-                 1, 1);
-    
-    // Asks the questions
-    q1.askQuestion();
-    q2.askQuestion();
-}
-
-std::string quoteOfTheDay(){
-    const char* quotes[5]{"Let's beat the highscore\n", "HEY HOW YOU DOING?\n", "Hello there...\n", "Work in silence.\n", "8008135\n"};
-    return quotes[rand() % 5 + 1];
->>>>>>> 503cddc (first commit)
 }
 
 void mainMenu(){
@@ -220,7 +200,7 @@ void showScore(){
     
     
 }
-
+    
 void saveHighScore(){
     std::ofstream writeFile("./highscore.txt");
     writeFile << highScore << std::endl;
@@ -236,7 +216,7 @@ std::string loadHighScore(){
     readFile.close();
     return hS;
 }
-
+    
 int main(){
     highScore = loadHighScore();
     while (looper == 1){
@@ -249,5 +229,3 @@ int main(){
     }
     return 0;
 }
-
-
